@@ -6,10 +6,89 @@
     <Name>IDH_Cube.database</Name>
     <FullPath>IDH_Cube.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>IDH DWH_C.cube</Name>
+      <FullPath>IDH DWH_C.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>IDH DWH_C.partitions</Name>
+          <FullPath>IDH DWH_C.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>D TIME.dim</Name>
+      <FullPath>D TIME.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D REGION.dim</Name>
+      <FullPath>D REGION.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D ROAD TYPE.dim</Name>
+      <FullPath>D ROAD TYPE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D SPEED LIMIT.dim</Name>
+      <FullPath>D SPEED LIMIT.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D TIME OF DAY.dim</Name>
+      <FullPath>D TIME OF DAY.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D WEATHER.dim</Name>
+      <FullPath>D WEATHER.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D ACCIDENT SEVERITY.dim</Name>
+      <FullPath>D ACCIDENT SEVERITY.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>D ACCIDENT DETAILS.dim</Name>
+      <FullPath>D ACCIDENT DETAILS.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>IDH DWH.ds</Name>
+      <FullPath>IDH DWH.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>IDH DWH.dsv</Name>
+      <FullPath>IDH DWH.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
+  <Roles>
+    <ProjectItem>
+      <Name>Role.role</Name>
+      <FullPath>Role.role</FullPath>
+    </ProjectItem>
+  </Roles>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>IDH DWH</Id>
+            <Name>IDH DWH</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=ACERV3-371;Integrated Security=SSPI;Initial Catalog=IDH_DWH</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>IDH DWH</Id>
+            <Name>IDH DWH</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
